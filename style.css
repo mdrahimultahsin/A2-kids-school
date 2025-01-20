@@ -90,9 +90,11 @@ section {
   font-size: 2rem;
   font-weight: 700;
 }
+.menu-bar ul {
+  gap: 40px;
+}
 .menu-bar ul li {
   list-style: none;
-  margin-right: 30px;
 }
 .menu-bar li a {
   text-decoration: none;
@@ -286,7 +288,10 @@ section {
 }
 
 .stories-card-3_2 {
-  display:none
+  display: none;
+}
+.stories-card-3_2 .card-content {
+  margin-top: 30px;
 }
 .stories-card .card-content {
   display: flex;
@@ -398,7 +403,7 @@ section {
     gap: 15px;
   }
   .stories-card-3_2 {
-    display:inline-block;
+    display: inline-block;
   }
   .card-date-box {
     padding: 10px 15px;
