@@ -1,0 +1,54 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:wght@500&display=swap');
+
+.quicksand-font {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+.raleway-medium {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+/* =================================================
+  Shared Styles
+===================================================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav,
+section,
+main{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+section {
+    margin-bottom: 60px;
+}
+
+
+
+/* =================================================
+  Header Section Styles
+===================================================*/
+
+
+
+/* =================================================
+  Header Section Styles
+===================================================*/
+/* =================================================
+  Header Section Styles
+===================================================*/
+
+
+
+/* =================================================
+  Responsive Design Styles
+===================================================*/
