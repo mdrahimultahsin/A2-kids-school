@@ -1,54 +1,417 @@
 /* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:wght@500&display=swap");
 
 .quicksand-font {
-    font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 .raleway-medium {
-    font-family: "Raleway", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
 /* =================================================
-  Shared Styles
+  Common CSS
 ===================================================*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-nav,
-section,
-main{
-    max-width: 1160px;
-    margin: 0 auto;
+
+:root {
+  --primary-color: #fea301;
+  --secondary-color: #01acfd;
+  --skyblue-color: #05d4df;
+  --purple-color: #5d58ef;
+  --white-color: #fff;
+  --black-color: #111111;
+  --gray-color: #808080;
+}
+body {
+  color: var(--black-color);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 section {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
+.flex {
+  display: flex;
+}
 
+.section-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-align: center;
+}
+.btn-primary {
+  padding: 12px 45px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+}
 
 /* =================================================
   Header Section Styles
 ===================================================*/
+.desktop-menu {
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.logo a {
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black-color);
+}
+.logo a > img {
+  width: 60px;
+}
+.logo a > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.menu-bar ul li {
+  list-style: none;
+  margin-right: 30px;
+}
+.menu-bar li a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.menu-bar li:first-child a {
+  color: var(--primary-color);
+}
+.menu-bar li:nth-child(2) a {
+  color: var(--secondary-color);
+}
+.menu-bar li:nth-child(3) a {
+  color: var(--skyblue-color);
+}
+.menu-bar li:last-child a {
+  color: var(--purple-color);
+}
 
-
+/* Mobile Menu Style */
+.mobile-menu {
+  display: none;
+}
+.mobile-menu {
+  padding: 15px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--primary-color);
+}
+.mobile-menu a img {
+  width: 45px;
+}
+#bars {
+  font-size: 2rem;
+}
+#banner {
+  height: 520px;
+  align-items: center;
+  gap: 50px;
+}
+.banner-content {
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 61px;
+}
+.banner-title span {
+  color: var(--secondary-color);
+}
+.banner-title #empowering {
+  display: block;
+  color: var(--primary-color);
+}
+.banner-description {
+  font-size: 1.25rem;
+}
+.banner-btn button {
+  background: var(--black-color);
+}
 /* =================================================
-  Header Section Styles
+  Curriculum Section Styles
 ===================================================*/
+#curriculum {
+  margin-top: 60px;
+  background: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+}
+.curriculum-card-container {
+  margin-top: 40px;
+  gap: 30px;
+}
+.curriculum-card-container .card {
+  padding: 40px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.curriculum-card-container .card img {
+  width: 130px;
+}
+.card-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+.card-description {
+  line-height: 28px;
+  font-size: 1rem;
+  color: var(--gray-color);
+}
+.card-btn {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card-1 {
+  background: linear-gradient(#def5ff, #ffffff00);
+  border: 1px solid #def5ff;
+}
+.card-2 {
+  background: linear-gradient(#fff4dc, #ffffff00);
+  border: 1px solid #fff4dc;
+}
+.card-2 > .card-btn {
+  color: var(--primary-color);
+}
+.card-3 {
+  background: linear-gradient(#f2e8ff, #ffffff00);
+  border: 1px solid #f2e8ff;
+}
+.card-3 > .card-btn {
+  color: var(--purple-color);
+}
+.arrow-btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.arrow-btn-group i {
+  padding: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 /* =================================================
-  Header Section Styles
+  Storis Section Styles
 ===================================================*/
+#stories {
+  padding: 20px 0 60px 0;
+  background: url(assets/bg.png),
+    linear-gradient(#ffffff, rgba(254, 163, 1, 0.3));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.stories-card-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 540px repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.stories-card {
+  background: var(--white-color);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.stories-card .card-img {
+  position: relative;
+}
+.stories-card .card-img img {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+.card-date-box {
+  padding: 15px 20px;
+  background: var(--skyblue-color);
+  color: var(--white-color);
+  border-radius: 50px;
+  position: absolute;
+  bottom: -15px;
+  left: 40px;
+  margin: auto;
+  font-size: 1rem;
+}
+.card-date-box2,
+.card-date-box5 {
+  background: #95b226;
+}
+.card-date-box3,
+.card-date-box3,
+.card-date-box4 {
+  background: var(--purple-color);
+}
 
-
+.stories-card-3_2 {
+  display:none
+}
+.stories-card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+.stories-card .card-content .card-title {
+  font-size: 1rem;
+}
+#big-card {
+  grid-row: 1/-1;
+}
+#big-card .card-content .card-title {
+  font-size: 1.5rem;
+}
+.section-btn {
+  width: 200px;
+  margin: auto;
+  margin-top: 20px;
+}
+.section-btn button {
+  background: var(--black-color);
+}
 /* =================================================
-  Responsive Design Styles
+  Responsive Design
 ===================================================*/
+
+/* For Medium Screen */
+@media screen and (min-width: 577px) and (max-width: 990px) {
+  .container {
+    padding: 20px 20px;
+  }
+  .nav-btn,
+  .arrow-btn-group,
+  .banner-title br {
+    display: none;
+  }
+  #banner {
+    height: auto;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .banner-img,
+  .banner-content {
+    max-width: 100% !important;
+  }
+
+  .curriculum-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-3 {
+    grid-column: span 2;
+  }
+  .stories-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    gap: 25px;
+  }
+  #big-card {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  .section-btn {
+    text-align: center;
+  }
+}
+/* For  Small Screen*/
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 20px 20px;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .desktop-menu,
+  .arrow-btn-group,
+  #big-card {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  #banner {
+    height: auto;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .banner-title {
+    font-size: 2rem;
+    line-height: normal;
+  }
+  .banner-description {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .curriculum-card-container {
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .stories-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .stories-card-3_2 {
+    display:inline-block;
+  }
+  .card-date-box {
+    padding: 10px 15px;
+    left: 20px;
+    font-size: 0.7rem;
+  }
+  .stories-card .card-content {
+    padding-bottom: 10px;
+  }
+  .stories-card .card-content .card-title {
+    font-size: 0.8rem;
+  }
+  .section-btn {
+    text-align: center;
+  }
+}
