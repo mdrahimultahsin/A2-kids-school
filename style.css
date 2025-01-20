@@ -259,6 +259,7 @@ section {
     linear-gradient(#ffffff, rgba(254, 163, 1, 0.3));
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 0;
 }
 
 .stories-card-container {
@@ -335,6 +336,79 @@ section {
   background: var(--black-color);
 }
 /* =================================================
+  Footer Section Styles
+===================================================*/
+footer {
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  background: var(--secondary-color);
+  color: var(--white-color);
+}
+.footer-box-container {
+  justify-content: space-between;
+}
+.footer-logo-box {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-logo-box .logo {
+  gap: 15px;
+  align-items: center;
+}
+.footer-logo-box .logo a img {
+  width: 85px;
+}
+.footer-logo-box .logo a {
+  color: var(--white-color);
+  line-height: normal;
+}
+.footer-logo-box .logo a h2 {
+  font-size: 2.7rem;
+  line-height: 30px;
+}
+.footer-logo-box p {
+  font-size: 1.25rem;
+}
+.footer-menu {
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-menu > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.footer-menu ul {
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-menu ul li {
+  list-style: none;
+}
+.footer-menu ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.footer-social-box {
+  flex-direction: column;
+  gap: 25px;
+}
+.footer-social-box h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.footer-socials {
+  gap: 15px;
+}
+.footer-socials img{
+  width: 40px;
+  cursor: pointer;
+}
+/* =================================================
   Responsive Design
 ===================================================*/
 
@@ -358,14 +432,14 @@ section {
     max-width: 100% !important;
   }
 
-  .curriculum-card-container {
+  .curriculum-card-container,.footer-box-container  {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   .card-3 {
     grid-column: span 2;
   }
-  .stories-card-container {
+  .stories-card-container{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto repeat(2, 1fr);
     gap: 25px;
@@ -377,7 +451,15 @@ section {
   .section-btn {
     text-align: center;
   }
+  .footer-box-container {
+    gap: 20px;
+    justify-items: center;
+  }
+  .footer-social-box  {
+    justify-self: left;
+  }
 }
+
 /* For  Small Screen*/
 @media screen and (max-width: 576px) {
   .container {
@@ -407,7 +489,7 @@ section {
     font-size: 0.9rem;
     font-weight: 500;
   }
-  .curriculum-card-container {
+  .curriculum-card-container,.footer-box-container  {
     flex-direction: column;
   }
   .card-title {
@@ -434,5 +516,8 @@ section {
   }
   .section-btn {
     text-align: center;
+  }
+  .footer-box-container {
+    gap: 30px;
   }
 }
