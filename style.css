@@ -290,8 +290,7 @@ section {
 ===================================================*/
 #stories {
   padding: 20px 0 60px 0;
-  background: url(assets/bg.png),
-    linear-gradient(#ffffff, rgba(254, 163, 1, 0.3));
+  background: url(assets/bg.png), linear-gradient(360deg, rgba(254, 163, 1, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0;
@@ -431,6 +430,7 @@ footer {
 .footer-social-box {
   flex-direction: column;
   gap: 25px;
+  grid-column: span 2;
 }
 .footer-social-box h2 {
   font-size: 1.5rem;
