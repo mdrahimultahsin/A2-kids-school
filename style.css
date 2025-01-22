@@ -451,6 +451,11 @@ footer {
 /* =================================================
   Responsive Design
 ===================================================*/
+@media screen and (max-width:1400px) {
+  .container {
+    padding: 20px 20px;
+  }
+}
 
 /* For Medium Screen */
 @media screen and (min-width: 577px) and (max-width: 990px) {
